@@ -14,6 +14,8 @@ h2 {
     color: #7d28a1;
     text-shadow: 4px 2px 5px #835a94;
     text-align: center;
+    font-family: 'Freckle Face', cursive;
+    font-size: 2.8em;
 }
 p {
     font-size: 0.8em;
@@ -33,8 +35,8 @@ h1 {
     justify-content: flex-start;
     align-items: center;
     width: 50%;
-    font-family: 'Akronim', cursive;
-    font-size: 2em;
+    font-family: 'Freckle Face', cursive;
+    font-size: 2.4em;
     color: #7d28a1;
     margin: 5px 0 5px 10px;
 }
@@ -94,6 +96,36 @@ h1 {
     border-color: #fff;
 }
 
+/* Features */
+#features-wrapper {
+    width: 85%;
+    margin: auto;
+    display: flex;
+    flex-flow: row nowrap;
+}
+.feature-item {
+    display: flex;
+    flex-flow: column;
+    justify-content: space-between;
+    align-items: center;
+}
+.feature-item:not(last-child) {
+    margin-right: 20px;
+}
+.feature-item img {
+    width: 100px;
+    height: 100px;
+    margin-right: 25px;
+}
+
+/* About */
+#about p {
+    width: 95%;
+    padding: 10px;
+    margin: auto;
+    margin-bottom: 35px;
+}
+
 /* Embedded Video */
 iframe {
     border: 6px solid #7d28a1;
@@ -106,7 +138,7 @@ iframe {
     width: 90%;
     display: flex;
     justify-content: center;
-    align-items: stretch;
+    align-items: flex-start;
     margin: auto;
 }
 .price-box {
@@ -120,15 +152,23 @@ iframe {
     border: solid 2px #7d28a1;
     border-radius: 5px;
     margin: 10px;
-    padding: 10px;
+    /* padding: 10px; */
     box-shadow: 5px 5px 8px #835a94;
+}
+#pricing #prices-heading {
+    font-size: 2.8em;
 }
 #pricing h3 {
     width: 100%;
     margin: 10px auto;
+    font-family: 'Freckle Face', cursive;
+    font-size: 2.2em;
+    text-align: center;
+    color: #7d28a1;
 }
 #pricing h2 {
     width: 100%;
+    font-family: 'Freckle Face', cursive;
     font-size: 5em;
     margin: 10px auto;
 }
@@ -138,6 +178,23 @@ iframe {
     font-size: 0.5em;
     padding-top: 10px;
     padding-left: 5px;
+}
+.price-box ul {
+    width: 100%;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.price-box ul li {
+    padding: 10px 20px;
+    margin: 0;
+    text-align: center;
+}
+.price-box ul li:nth-child(2n) {
+    background-color: #fff;
+}
+.price-box ul li:nth-child(2n+1) {
+    background-color: #e6ccff;
 }
 .price-box button {
     width: 100%;
@@ -149,7 +206,11 @@ iframe {
     background-color: #7d28a1;
     border-color: transparent;
     cursor: pointer;
+    box-sizing: border-box;
+    margin: 10px;
 }
+
+
 /* Media Queries */
 @media screen and (max-width: 717px) {
     /* Navigation */
@@ -169,6 +230,19 @@ iframe {
     /* Form */
     #form {
         margin-top: 200px;
+    }
+
+    /* Features */
+    #features-wrapper {
+        flex-direction: column;
+    }
+    .feature-item {
+        flex-direction: row;
+        flex-wrap: nowrap;
+    }
+    .feature-item:not(last-child) {
+        margin-right: 0;
+        margin-bottom: 20px;
     }
 
     /* Prices */
