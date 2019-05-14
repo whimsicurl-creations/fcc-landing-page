@@ -1,4 +1,5 @@
 /* Purple: #7D28A1 */
+/* Main Styles */
 body {
     background: #e6ccff;
     font-size: 18px;
@@ -9,9 +10,20 @@ body {
     justify-content: center;
     align-items: center;
 }
+h2 {
+    color: #7d28a1;
+    text-shadow: 4px 2px 5px #835a94;
+    text-align: center;
+}
+p {
+    font-size: 0.8em;
+}
+
+/* Header & Navigation */
 #header {
     position: fixed;
     top: 0;
+    left: 0;
     width: 100%;
     background-color: #e6ccff;
     border-bottom: solid 2px #7d28a1;
@@ -24,7 +36,7 @@ h1 {
     font-family: 'Akronim', cursive;
     font-size: 2em;
     color: #7d28a1;
-    margin: 5px 0;
+    margin: 5px 0 5px 10px;
 }
 #header img {
     width: 75px;
@@ -40,8 +52,8 @@ h1 {
 #nav-bar a {
     text-decoration: none;
     color: white;
-    padding: 5px 10px;
-    margin: 5px;
+    padding: 5px 20px;
+    margin: 5px 10px;
     background-color: #7d28a1;
     border-radius: 5px;
     font-size: .8em;
@@ -51,22 +63,109 @@ h1 {
     background-color: white;
     font-weight: bold;
 }
+
+/* Form */
 #form {
     margin-top: 150px;
+    display: flex;
+    align-items: center;
 }
+#email {
+    border-color: #7d28a1;
+    border-radius: 5px;
+    padding: 5px;
+    box-shadow: 3px 3px 5px #835a94;
+    margin-right: 10px;
+}
+#submit {
+    margin-left: 10px;
+    border-radius: 5px;
+    padding: 5px 25px;
+    box-shadow: 3px 3px 5px #835a94;
+    background-color: #7d28a1;
+    color: white;
+    border-color: #7d28a1;
+    font-weight: bold;
+    font-size: 0.9em;
+}
+#submit:hover {
+    background-color: #fff;
+    color: #7d28a1;
+    border-color: #fff;
+}
+
+/* Embedded Video */
 iframe {
-    border: 3px solid #7d28a1;
+    border: 6px solid #7d28a1;
+    border-radius: 4px;
+    margin: auto;
+}
+
+/* Prices */
+#price-wrapper {
+    width: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    margin: auto;
+}
+.price-box {
+    width: 100%;
+    box-sizing: border-box;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    background-color: white;
+    border-color: #7d28a1;
+    border: solid 2px #7d28a1;
+    border-radius: 5px;
+    margin: 10px;
+    padding: 10px;
+    box-shadow: 5px 5px 8px #835a94;
+}
+#pricing h3 {
+    width: 100%;
+    margin: 10px auto;
+}
+#pricing h2 {
+    width: 100%;
+    font-size: 3em;
+    margin: 10px auto;
+}
+.price-box button {
+    width: 100%;
+    color: white;
+    font-weight: bold;
+    font-size: 1.2em;
+    padding: 5px 20px;
+    border-radius: 5px;
+    background-color: #7d28a1;
+    border-color: transparent;
+    cursor: pointer;
 }
 /* Media Queries */
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 717px) {
+    /* Navigation */
     #nav-bar a {
         font-size: 1em;
         color: #7d28a1;
         background-color: transparent;
+        margin: 0;
+        padding: 0 8px;
     }
     #nav-bar a:hover {
         text-decoration: underline;
         font-weight: bolder;
         background-color: transparent;
+    }
+
+    /* Form */
+    #form {
+        margin-top: 200px;
+    }
+
+    /* Prices */
+    #price-wrapper {
+        flex-direction: column;
     }
 }
